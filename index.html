@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Vet Medical Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>WELCOME VET MEDICAL AGENCY				
+</h1>
+    
+    <div id="billing-form">
+        <label for="medicine">Medicine:</label>
+        <select id="medicine">
+            <option value="" disabled selected>Select Medicine</option>
+            <option value="AQUAVET-12-1LTR">AQUAVET-12-1LTR</option>
+            <option value="NIOCID-1LTR">NIOCID-1LTR</option>
+            <!-- Add the other medicines as needed -->
+            <option value="virocid">virocid</option>
+            <option value="kamprolium">kamprolium</option>
+            <option value="cal -d plus 5lt">cal -d plus 5lt</option>
+           <option value="AQUAVET-12-1LTR">AQUAVET-12-1LTR</option>
+                    <option value="NIOCID-1LTR">NIOCID-1LTR</option>
+                    <option value="TOXI-COPP-1LTR">TOXI-COPP-1LTR</option>
+                    <option value="FALCOF-1LTR">FALCOF-1LTR</option>
+                    <option value="FALCOF-5LTR">FALCOF-5LTR</option>
+                    <option value="AQUAVET-5LTR">AQUAVET-5LTR</option>
+                    <option value="HEFTOGIN-5LTR">HEFTOGIN-5LTR</option>
+                    <option value="VITA V GROW">VITA V GROW</option>
+                    <option value="NEFRO-N">NEFRO-N</option>
+                    <option value="ANTHRO+">ANTHRO+</option>
+                    <option value="VITA SEL200GM">VITA SEL200GM</option>
+                    <option value="LEVOFLOX">LEVOFLOX</option>
+                    <option value="ENROFLO20% 1LTR">ENROFLO20% 1LTR</option>
+                    <option value="FALCOLIV 5LTR">FALCOLIV 5LTR</option>
+                    <option value="FALCOLIV 1LTR">FALCOLIV 1LTR</option>
+                    <option value="OSTOVET 2LTR">OSTOVET 2LTR</option>
+                    <option value="OSTOVET 1LTR">OSTOVET 1LTR</option>
+                    <option value="AZIHEAL-4OOGM">AZIHEAL-4OOGM</option>
+                    <option value="ELECTROcare">ELECTROcare</option>
+                    <option value="GROWMIN-1LTR">GROWMIN-1LTR</option>
+                    <option value="GROWMIN-5LTR">GROWMIN-5LTR</option>
+                    <option value="VIMRAL-500ML">VIMRAL-500ML</option>
+                    <option value="BRONOCASE-250ML">BRONOCASE-250ML</option>
+                    <option value="YOLKCARE-100ML">YOLKCARE-100ML</option>
+                    <option value="COUGH HEAL-5LTR">COUGH HEAL-5LTR</option>
+                    <option value="VM B-PLEX -50GM">VM B-PLEX -50GM</option>
+                    <option value="AMPROLIUM 500GM">AMPROLIUM 500GM</option>
+                    <option value="RED X BLU">RED X BLU</option>
+                    <option value="NIOCOFF 5LTR">NIOCOFF 5LTR</option>
+                    <option value="BONTON 5LTR">BONTON 5LTR</option>
+                    <option value="BROTON 5LTR">BROTON 5LTR</option>
+                    <option value="RESPIRON 5LTR">RESPIRON 5LTR</option>
+                    <option value="COSUMIX PLUS">COSUMIX PLUS</option>
+                    <option value="PROTOMIX 500GM">PROTOMIX 500GM</option>
+                    <option value="TOXOL-5LTR">TOXOL-5LTR</option>
+                    <option value="NEFROCARE-5LTR">NEFROCARE-5LTR</option>
+                    <option value="G PROMIN-5LTR">G PROMIN-5LTR</option>
+                    <option value="DG FORTE-5LTR">DG FORTE-5LTR</option>
+                    <option value="NIRON DS">NIRON DS</option>
+                    <option value="Gallus pro">Gallus pro</option>
+                    <option value="NIOCID-5LTR">NIOCID-5LTR</option>
+                    <option value="NOIPRIME FORTE">NOIPRIME FORTE</option>
+                    <option value="GUT IMMUNE 1KG">GUT IMMUNE 1KG</option>
+                    <option value="SUPEROX 5LTR">SUPEROX 5LTR</option>
+                    <option value="IMMUHIT">IMMUHIT</option>
+                    <option value="PLENROCIN">PLENROCIN</option>
+                    <option value="PLENTONIL 5LTR">PLENTONIL 5LTR</option>
+                    <option value="plenta hepta">plenta hepta</option>
+                    <option value="Plentiguard">Plentiguard</option>
+                    <option value="noor tone">noor tone</option>
+                    <option value="vetno coff 5ltr">vetno coff 5ltr</option>
+                    <option value="virocid">virocid</option>
+                    <option value="kamprolium">kamprolium</option>
+                    <option value="cal -d plus 5lt">cal -d plus 5lt</option>
+        </select>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" placeholder="Enter Quantity">
+
+        <label for="rate">Rate (optional):</label>
+        <input type="number" id="rate" placeholder="Enter Rate per Unit">
+
+        <button id="addItemButton">Add to Bill</button>
+    </div>
+
+    <h2>Bill Items</h2>
+    <table id="billTable" border="1">
+        <thead>
+            <tr>
+                <th>Medicine</th>
+                <th>Quantity</th>
+                <th>Rate</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="billItems">
+            <!-- Items will be added here -->
+        </tbody>
+    </table>
+    
+    <p><strong>Total Payable Amount: ₹<span id="totalAmount">0.00</span></strong></p>
+
+    <button id="generateBillButton">Generate Bill</button>
+
+    <div id="finalBill">
+        <!-- Final bill will be shown here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
